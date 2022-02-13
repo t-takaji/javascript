@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Getting Started Extension's Popup</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <style>
+        body {
+            min-width: 400px;
+            overflow-x: hidden;
+        }
+
+        img {
+            margin: 5px;
+            border: 2px solid black;
+            vertical-align: middle;
+            width: 75px;
+            height: 75px;
+        }
+
+    </style>
+    <!--
+     - JavaScript and HTML must be in separate files: see our Content Security
+     - Policy documentation[1] for details and explanation.
+     -
+     - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/popup.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <br />
+        <p class="h5">フォーム系</p>
+        <div class="form-check">
+            <label class="form-check-label">
+                    <input type="checkbox" name="valueTarget" id="vacTargetText" value="input:text" checked="checked" class="form-check-input" />
+                    テキスト
+                </label>
+            <label class="form-check-label">
+                    <input type="checkbox" name="valueTarget" id="vacTargetPassword" value="input:password" checked="checked" class="form-check-input" />
+                    パスワード
+                </label>
+            <label class="form-check-label">
+                    <input type="checkbox" name="valueTarget" id="vacTargetTextarea" value="textarea" checked="checked" class="form-check-input" />
+                    テキストエリア
+                </label>
+        </div>
+
+        <p class="h5">選択系</p>
+        <div class="form-check">
+            <label class="form-check-label">
+                    <input type="checkbox" name="valueTarget" id="vacTargetRadio" value="input:radio" disabled="disabled" class="form-check-input" />
+                    ラジオボタン
+                </label>
+            <label class="form-check-label">
+                    <input type="checkbox" name="valueTarget" id="vacTargetCheckBox" value="input:checkbox" disabled="disabled" class="form-check-input" />
+                    チェックボックス
+                </label>
+            <label class="form-check-label">
+                    <input type="checkbox" name="valueTarget" id="vacTargetSelect" value="select" checked="checked" class="form-check-input" />
+                    セレクトボックス
+                </label>
+        </div>
+
+        <p class="h5">操作系&nbsp;<button id="addOperationTarget" class="btn btn-outline-primary btn-sm">操作対象追加</button></p>
+
+        <div id="operationArea" class="form-group">
+            <input type="text" name="vacOperationTarget" value="" placeholder="操作対象のIDを入力" value="" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <button id="exeVacuum" class="btn btn-outline-primary">吸い取り</button>
+        </div>
+        <div id="resCodeArea" style="display : none;">
+            <textarea id="resCode" style="width: 374px; height: 140px; margin: 15px 10px; font-size: 12px;" class="form-control"></textarea>
+        </div>
+    </div>
+</body>
+
+</html>
