@@ -5,3 +5,6 @@
 ### ・Google Apps Script
 - テキスト作成
 - シートコピー
+
+### ・モーダルテスト
+https://t-takaji.github.io/javascript/modal/
